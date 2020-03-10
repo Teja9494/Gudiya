@@ -1,6 +1,6 @@
-from tqdm import tqdm
-import torch
-import torch.nn.functional as F
+#from tqdm import tqdm
+#import torch
+#import torch.nn.functional as F
 
 def train(model, device, train_loader, optimizer, epoch, train_losses, train_acc,criterion):
     model.train()

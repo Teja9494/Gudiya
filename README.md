@@ -1,0 +1,2 @@
+# Gudiya
+Simple mode

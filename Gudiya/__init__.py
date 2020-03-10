@@ -1,5 +1,5 @@
-from Gudiya.Model import Resnet,BasicBlock,Bottleneck
-from Gudiya.Model import Resnet18
+from Gudiya.Model import ResNet,BasicBlock,Bottleneck
+from Gudiya.Model import ResNet18
 #from Model_test import test
 #from Model_train import train
 #from Utils import *

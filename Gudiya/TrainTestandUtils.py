@@ -198,6 +198,6 @@ class TrainTestandUtils():
         plt.plot(range(0, self.epochs), self.total_test_accuracy, '-b', label='Test Accuracy')
         plt.plot(range(0, self.epochs), self.total_train_accuracy, '-r', label='Train Accuracy')
         plt.legend(loc=0, fontsize=15)
-        plt.title("VAL ACC FOR {} EPOCHS".format(self.epochs))
+        plt.title("ACC FOR {} EPOCHS".format(self.epochs))
         plt.show()
 

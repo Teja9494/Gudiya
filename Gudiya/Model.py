@@ -8,13 +8,13 @@ class BasicBlock(nn.Module):
 
     def __init__(self, in_planes, planes, stride=1):
         super(BasicBlock, self).__init__()
-        self.drop_val = 0.1
+        #self.drop_val = 0.1
         self.conv1 = nn.Conv2d(in_planes, planes, kernel_size=3, stride=stride, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(planes)
-        self.d1 = nn.Dropout2d(self.drop_val)
+        #self.d1 = nn.Dropout2d(self.drop_val)
         self.conv2 = nn.Conv2d(planes, planes, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn2 = nn.BatchNorm2d(planes)
-        self.d2 = nn.Dropout2d(self.drop_val)
+        #self.d2 = nn.Dropout2d(self.drop_val)
 
 
         self.shortcut = nn.Sequential()
@@ -26,8 +26,8 @@ class BasicBlock(nn.Module):
             )
 
     def forward(self, x):
-        out = self.d1(F.relu(self.bn1(self.conv1(x))))
-        out = self.d2(self.bn2(self.conv2(out)))
+        out = (F.relu(self.bn1(self.conv1(x))))
+        out = (self.bn2(self.conv2(out)))
         out += self.shortcut(x)
         out = F.relu(out)
         return out
